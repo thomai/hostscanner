@@ -15,9 +15,11 @@ with open(output_path, 'w') as output_file:
             for line in input_file:
                 if not 'saddr' in line:
                     host = line.replace('\n', '')
-                    try:
-                        host = socket.gethostbyaddr(host)[0]
-                        host = host + ':' + port
-                        output_file.write(host + '\n')
-                    except socket.herror:
-                        pass
+                    #try:
+                    #    host = socket.gethostbyaddr(host)[0]
+                    #except socket.herror:
+                    #    pass
+                    host = host + ':' + port
+                    output_file.write(host + '\n')
+
+
