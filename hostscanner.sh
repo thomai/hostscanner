@@ -20,7 +20,7 @@ zmap -p 587 $IP_RANGE -b blacklist -o ../../results/zmap_output_587
 echo
 echo DNS reverse lookup all hosts
 echo ============================
-python format_and_prepare_results.py ../../results ../../results/hosts_to_scan
+python format_and_prepare_results.py ../../results/ ../../results/hosts_to_scan
 
 echo
 echo Finished
