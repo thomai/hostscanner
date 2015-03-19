@@ -1,3 +1,3 @@
 #!/bin/bash
 
-rm -f results/*
+rm -f ../../results/*

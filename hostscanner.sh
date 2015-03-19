@@ -5,22 +5,22 @@ IP_RANGE=$1
 echo
 echo Starting ZMap with port 25
 echo =====================
-zmap -p 25 $IP_RANGE -b blacklist -o results/zmap_output_25
+zmap -p 25 $IP_RANGE -b blacklist -o ../../results/zmap_output_25
 
 echo
 echo Starting ZMap with port 465
 echo ======================
-zmap -p 465 $IP_RANGE -b blacklist -o results/zmap_output_465
+zmap -p 465 $IP_RANGE -b blacklist -o ../../results/zmap_output_465
 
 echo
 echo Starting ZMap with port 587
 echo ======================
-zmap -p 587 $IP_RANGE -b blacklist -o results/zmap_output_587
+zmap -p 587 $IP_RANGE -b blacklist -o ../../results/zmap_output_587
 
 echo
 echo DNS reverse lookup all hosts
 echo ============================
-python format_and_prepare_results.py
+python format_and_prepare_results.py ../../results ../../results/hosts_to_scan
 
 echo
 echo Finished
